@@ -1,0 +1,27 @@
+#Request Network Devices
+import pprint
+import requests
+import meraki
+import json
+
+url = "https://n123.meraki.com/api/v0/organizations/343013/networks/N_632192797692223705/devices/"
+
+headers = {
+    'X-Cisco-Meraki-API-Key': "11824ef3ef9fdd6f7bb35f0b9128debf34298823",
+    'Content-Type': "application/json",
+    'shard': "n123",
+    'cache-control': "no-cache"
+}
+
+payload = ""
+
+r = requests.get(url, headers=headers)
+
+# s = requests.get(url, Names=name)
+
+
+merakiDatafile = r
+
+print("Network Devices for:")
+
+pprint.pprint (r.json ())
